@@ -1,0 +1,22 @@
+{
+    "name": "Silksprite.ClusterScriptLogConsoleWindow2",
+    "rootNamespace": "",
+    "references": [
+        "ClusterVR.CreatorKit.Item",
+        "ClusterVR.CreatorKit.Item.Implements",
+        "ClusterVR.CreatorKit.Translation",
+        "Silksprite.ClusterScriptLogConsoleWindow2.Format",
+        "Silksprite.ClusterScriptLogConsoleWindow2.SourcemapSupport"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

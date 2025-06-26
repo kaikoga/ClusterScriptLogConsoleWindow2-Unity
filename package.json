@@ -1,0 +1,16 @@
+{
+  "name": "net.kaikoga.cslcw2",
+  "url": "https://vpm.kaikoga.net/millenium/net.kaikoga.cslcw2/net.kaikoga.cslcw2-1.0.0.zip",
+  "displayName": "ClusterScript Log Console Window 2",
+  "version": "1.0.0",
+  "unity": "2021.3",
+  "description": "Better ClusterScript Log Console Window",
+  "dependencies": {
+    "mu.cluster.cluster-creator-kit": "2.0.0"
+  },
+  "author": {
+    "name": "kaikoga",
+    "email": "info@mail.kaikoga.net",
+    "url": "https://www.kaikoga.net/"
+  }
+}
