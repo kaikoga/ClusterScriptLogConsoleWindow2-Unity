@@ -13,6 +13,8 @@ namespace Silksprite.ClusterScriptLogConsoleWindow2.Window.ItemInspector
 
         public ScriptItemInspectorSeverityFilterView()
         {
+            style.flexGrow = 0;
+            style.flexShrink = 0;
             severityFilter = new SeverityFilter();
             hierarchy.Add(severityFilter);
         }

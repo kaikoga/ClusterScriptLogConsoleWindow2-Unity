@@ -34,7 +34,7 @@ namespace Silksprite.ClusterScriptLogConsoleWindow2.Window.LogConsole
             ScriptLogStackItem[] stackItems;
             if (logEntry != null)
             {
-                sourceCodeAsset = ItemRepository.Instance.FindSourceCodeAssetSlow(logEntry.ItemId, logEntry.ItemName);
+                sourceCodeAsset = ItemRepository.Instance.FindSourceCodeAssetSlow(logEntry.ItemId, logEntry.ItemName, logEntry.IsPlayerScript());
                 stackItems = new[]
                 {
                     new ScriptLogStackItem(ScriptLogEntryPositionExtractor.ExtractPosition(logEntry), "")

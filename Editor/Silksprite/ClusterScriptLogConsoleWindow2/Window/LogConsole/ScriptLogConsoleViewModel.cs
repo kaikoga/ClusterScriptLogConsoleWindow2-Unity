@@ -200,7 +200,7 @@ namespace Silksprite.ClusterScriptLogConsoleWindow2.Window.LogConsole
 
         void OpenAsset(ScriptLogEntry logEntry, ScriptLogPosition position)
         {
-            var sourceCodeAsset = ItemRepository.FindSourceCodeAssetSlow(logEntry.ItemId, logEntry.ItemName);
+            var sourceCodeAsset = ItemRepository.FindSourceCodeAssetSlow(logEntry.ItemId, logEntry.ItemName, logEntry.IsPlayerScript());
             if (sourceCodeAsset != null)
             {
                 AssetOpener.OpenAsset(sourceCodeAsset, position.LineNumberOneBased, position.ColumnNumberOneBased);

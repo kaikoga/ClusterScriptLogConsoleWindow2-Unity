@@ -2,7 +2,7 @@
   "name": "net.kaikoga.cslcw2",
   "url": "https://vpm.kaikoga.net/millenium/net.kaikoga.cslcw2/net.kaikoga.cslcw2-1.0.0.zip",
   "displayName": "ClusterScript Log Console Window 2",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "unity": "2021.3",
   "description": "Better ClusterScript Log Console Window",
   "dependencies": {

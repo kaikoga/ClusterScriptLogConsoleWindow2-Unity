@@ -63,15 +63,32 @@ namespace Silksprite.ClusterScriptLogConsoleWindow2.Repository
             return null;
         }
 
-        public JavaScriptAsset FindSourceCodeAssetSlow(ulong itemId, string itemName)
+        public JavaScriptAsset FindSourceCodeAssetSlow(ulong itemId, string itemName, bool isPlayerScript)
         {
-            var scriptableItem = FindItemSlow(itemId, itemName)?.gameObject.GetComponent<ScriptableItem>();
-            if (scriptableItem == null)
+            var item = FindItemSlow(itemId, itemName);
+            switch (isPlayerScript)
             {
-                return null;
+                case false:
+                {
+                    var scriptableItem = item?.gameObject.GetComponent<ScriptableItem>();
+                    if (scriptableItem == null)
+                    {
+                        return null;
+                    }
+                    using var scriptableItemAccess = new ScriptableItemAccess(scriptableItem);
+                    return scriptableItemAccess.sourceCodeAsset;
+                }
+                case true:
+                {
+                    var playerScript = item?.gameObject.GetComponent<PlayerScript>();
+                    if (playerScript == null)
+                    {
+                        return null;
+                    }
+                    using var playerScriptAccess = new PlayerScriptAccess(playerScript);
+                    return playerScriptAccess.sourceCodeAsset;
+                }
             }
-            using var scriptableItemAccess = new ScriptableItemAccess(scriptableItem);
-            return scriptableItemAccess.sourceCodeAsset;
         }
 
         Item DoFindItemByNameSlow(string itemName, Item[] sceneItems)

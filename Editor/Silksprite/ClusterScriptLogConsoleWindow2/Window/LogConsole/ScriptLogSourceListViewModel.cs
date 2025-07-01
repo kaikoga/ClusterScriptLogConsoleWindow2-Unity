@@ -26,7 +26,7 @@ namespace Silksprite.ClusterScriptLogConsoleWindow2.Window.LogConsole
         {
             if (consoleViewModel.Selection.Value is { } logEntry)
             {
-                var sourceCodeAsset = ItemRepository.Instance.FindSourceCodeAssetSlow(logEntry.ItemId, logEntry.ItemName);
+                var sourceCodeAsset = ItemRepository.Instance.FindSourceCodeAssetSlow(logEntry.ItemId, logEntry.ItemName, logEntry.IsPlayerScript());
                 if (sourceCodeAsset != null)
                 {
                     Items.Value = Deminifier.CollectOriginalSources(sourceCodeAsset)

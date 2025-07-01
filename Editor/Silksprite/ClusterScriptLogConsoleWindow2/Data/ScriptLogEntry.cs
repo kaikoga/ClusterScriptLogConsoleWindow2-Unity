@@ -19,6 +19,7 @@ namespace Silksprite.ClusterScriptLogConsoleWindow2.Data
         public string Kind;
         public ScriptLogPosition Position;
         public ScriptLogStackItem[] Stack = { };
+        public bool IsPlayerScript() => Kind == "PlayerScript";
 
         public string ItemIdString() => ItemId.ToString();
         public string TimestampString() => Timestamp.LocalDateTime.ToString(CultureInfo.CurrentCulture);
