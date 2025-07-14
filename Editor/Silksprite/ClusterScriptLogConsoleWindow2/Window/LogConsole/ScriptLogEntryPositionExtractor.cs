@@ -5,7 +5,7 @@ namespace Silksprite.ClusterScriptLogConsoleWindow2.Window.LogConsole
 {
     public static class ScriptLogEntryPositionExtractor
     {
-        static readonly Regex JintPositionPattern = new Regex(@"^.*<\[?([0-9]+)[,:]([0-9]+)(?:\.\.[0-9]+[,:][0-9]+)?[\]\)]?>.*?$");
+        static readonly Regex JintPositionPattern = new Regex(@"^.*<\[?([0-9]+)[,:]([0-9]+)(?:\.\.[0-9]+[,:]?[0-9]?)?[\]\)]?>.*?$", RegexOptions.Singleline);
 
         public static ScriptLogPosition ExtractPosition(ScriptLogEntry logEntry)
         {

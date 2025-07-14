@@ -7,21 +7,23 @@ namespace Silksprite.ClusterScriptLogConsoleWindow2.Repository
     {
         public static readonly EditorSettingsRepository Instance = new();
 
+        static readonly string[] JsExtensions = { "js", "ts" }; 
+
         public bool GenerateJsInProject
         {
-            get => EditorSettings.projectGenerationUserExtensions.Contains("js");
+            get => JsExtensions.All(ext => EditorSettings.projectGenerationUserExtensions.Contains(ext));
             set
             {
                 if (value)
                 {
                     EditorSettings.projectGenerationUserExtensions = EditorSettings.projectGenerationUserExtensions
-                        .Concat(new[] { "js" })
+                        .Concat(JsExtensions)
                         .Distinct().ToArray();
                 }
                 else
                 {
                     EditorSettings.projectGenerationUserExtensions = EditorSettings.projectGenerationUserExtensions
-                        .Where(ex => ex != "js")
+                        .Where(ext => !JsExtensions.Contains(ext))
                         .ToArray();
                 }
             }

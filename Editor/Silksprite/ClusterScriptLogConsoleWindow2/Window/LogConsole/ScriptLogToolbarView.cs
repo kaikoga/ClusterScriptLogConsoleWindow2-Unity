@@ -105,7 +105,7 @@ namespace Silksprite.ClusterScriptLogConsoleWindow2.Window.LogConsole
             {
                 var button = new Button
                 {
-                    text = "Open .js in C# Project",
+                    text = "Open .js and .ts in C# Project",
                 };
                 button.clicked += () =>
                 {
